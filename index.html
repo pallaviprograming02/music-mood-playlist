@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Music Player</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Mood-based sound lounge</p>
+        <h1>Play your vibe, one mood at a time.</h1>
+        <p class="lede">
+          Pick a mood to launch a soft, interactive soundscape. The page is built as
+          a clean three-file app with HTML, CSS, and JavaScript split apart.
+        </p>
+        <div class="badge-row">
+          <span>Instant sound</span>
+          <span>Responsive layout</span>
+          <span>Easy mood switching</span>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel player-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="label">Now playing</p>
+              <h2 id="mood-label">Calm waves</h2>
+            </div>
+            <div id="mood-emoji" class="emoji-badge" aria-hidden="true">🌊</div>
+          </div>
+
+          <p id="mood-copy" class="mood-copy">
+            Soft, floating notes for a peaceful, focused break.
+          </p>
+
+          <div class="visualizer" aria-label="Audio visualization">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="volume-box">
+            <div class="volume-top">
+              <label for="volume-slider">Volume</label>
+              <strong id="volume-value">60%</strong>
+            </div>
+            <input id="volume-slider" type="range" min="0" max="100" value="60" />
+          </div>
+
+          <div class="button-row">
+            <button id="play-toggle" class="primary-btn" type="button">Play mood</button>
+            <button id="stop-btn" class="ghost-btn" type="button">Stop</button>
+          </div>
+
+          <p class="small-note">Tip: tap any mood card to switch the sound instantly.</p>
+        </article>
+
+        <article class="panel cards-panel">
+          <div class="panel-heading compact">
+            <div>
+              <p class="label">Choose a mood</p>
+              <h2>Pick your atmosphere</h2>
+            </div>
+          </div>
+
+          <div class="mood-grid">
+            <button class="mood-card active" type="button" data-mood="calm">
+              <span class="mood-icon">🌊</span>
+              <strong>Calm</strong>
+              <small>Soft waves and mellow notes</small>
+            </button>
+
+            <button class="mood-card" type="button" data-mood="happy">
+              <span class="mood-icon">☀️</span>
+              <strong>Happy</strong>
+              <small>Bright chords and upbeat energy</small>
+            </button>
+
+            <button class="mood-card" type="button" data-mood="focus">
+              <span class="mood-icon">🧠</span>
+              <strong>Focus</strong>
+              <small>Clean pulses for deep focus</small>
+            </button>
+
+            <button class="mood-card" type="button" data-mood="dreamy">
+              <span class="mood-icon">✨</span>
+              <strong>Dreamy</strong>
+              <small>Floating synths and gentle glow</small>
+            </button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
